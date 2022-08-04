@@ -34,6 +34,7 @@
 </head>
 <nav>
     <header class="bg-white py-6">
+
         <div class="container mx-auto flex justify-between items-center px-6">
             <div>
                 <a href="{{ url('/') }}" class="no-underline">
@@ -98,7 +99,7 @@
     @yield('content')
 </body>
 
-<footer class="mt-10 p-5 bg-black text-white w-full">
+<footer class="mt-10 p-5 bg-black text-white w-full  left-0 bottom-0">
     <div class="justify-center md:flex">
         <div class="leading-extra-9">
             <div class="items-center space-x-1">
