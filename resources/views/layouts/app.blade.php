@@ -21,11 +21,15 @@
     <meta property="twitter:description"
         content="Nuestro nuevo proyecto en Hands-On es el desarrollo de un Yo sé LESCO (Lengua de Señas Costarricense) de acceso gratuito para toda la comunidad.">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon_handson.png" />
-    <title>{{ config('app.name', 'Yo sé LESCO') }}</title>
+    <link rel="stylesheet" href="{{ asset('css/backtop.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" />  
+
+    <title>{{ config('app.name', 'Yo sé LESCO') }}</title>
+  
+   
 
 </head>
 <nav>
@@ -88,8 +92,9 @@
         </div>
     </header>
 </nav>
-
+<a id="backtop"></a>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
+  
     @yield('content')
 </body>
 
@@ -136,5 +141,6 @@
         menu.classList.toggle("hidden");
     });
 </script>
-
+<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+<script src="{{ asset('js/backtop.js') }}"></script> 
 </html>
