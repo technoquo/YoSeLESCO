@@ -24,7 +24,8 @@ return new class extends Migration
             $table->string('facebook');
             $table->string('twitter');
             $table->string('youtube');
-            $table->string('status');
+            $table->boolean('status');
+            $table->foreignId('id_category');
             $table->timestamps();
         });
     }

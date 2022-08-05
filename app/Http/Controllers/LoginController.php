@@ -23,6 +23,6 @@ class LoginController extends Controller
             return back()->with('mensaje', 'Credenciales Incorrectas');
         }
 
-        return redirect()->route('perfiles.index', auth()->user()->name );
+        return redirect()->route('drashboard');
     }
 }

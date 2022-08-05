@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categorias', function (Blueprint $table) {
-            $table->id();
-            $table->string('category');
-            $table->string('banner');
-            $table->boolean('status');
-            $table->timestamps();
+        Schema::table('perfiles', function (Blueprint $table) {
+           $table->string('username');
         });
     }
 
@@ -29,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorias');
+        Schema::table('perfiles', function (Blueprint $table) {
+            $table->string('username');
+        });
     }
 };
