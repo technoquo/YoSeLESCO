@@ -11,7 +11,7 @@ class CategoryController extends Controller
     public function index()
     {
 
-        $categorias = Categoria::where('status', '=', 1)->orderBy('category', 'asc')->get();
+        $categorias = Categoria::orderBy('category', 'asc')->get();
         return view('categorias.index', ['categorias' => $categorias]);
     }
 
@@ -65,7 +65,7 @@ class CategoryController extends Controller
             'status' => $request->status === 'on'
         ]);
 
-        $categorias = Categoria::where('status', '=', 1)->orderBy('category', 'asc')->get();
+        $categorias = Categoria::orderBy('category', 'asc')->get();
         return view('categorias.index', ['categorias' => $categorias]);
     
     

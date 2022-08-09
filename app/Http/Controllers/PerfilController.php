@@ -12,7 +12,11 @@ class PerfilController extends Controller
 {
     public function index(User $user)
     {
-      return view('perfiles.index');
+      
+      
+      $perfiles = Perfil::orderBy('full_name', 'asc')->get();
+      
+      return view('perfiles.index', ['perfiles' => $perfiles]);
     }
 
     public function create() 
@@ -52,6 +56,42 @@ class PerfilController extends Controller
 
 
         return redirect()->route('perfiles.index');
+    }
+
+    public function edit($id)
+    {
+        $categorias = Categoria::where('status','=', 1)->orderBy('category', 'asc')->get();
+      
+        return view(
+            'perfiles.edit',
+            [
+            'perfil' => Perfil::where('id', $id)->first(),
+            'categorias' => $categorias
+            ]
+        );
+    }
+
+    public function update(Request $request, $id)
+    {
+
+      
+        $this->validate($request, [
+            'full_name' => 'required',
+            'username' => 'required',
+            'occupation' => 'required',
+            'imagen' => 'required',
+            'id_category' => 'required'
+    ]);
+
+     
+    Perfil::where('id', $id)->update(
+        $request->status === 'on' 
+            ? array_replace($request->except('_token', '_method'), ['status' => true])
+            : array_replace($request->except('_token', '_method'), ['status' => false])
+    );
+        return redirect()->route('perfiles.index');
+    
+    
     }
 
 }

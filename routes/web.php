@@ -36,9 +36,10 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 Route::get('/perfiles/index', [PerfilController::class, 'index'])->name('perfiles.index');
-
 Route::get('/perfiles/create', [PerfilController::class, 'create'])->name('perfiles.create');
 Route::post('perfiles', [PerfilController::class, 'store'])->name('perfiles.store');
+Route::get('/perfiles/{id}', [PerfilController::class, 'edit'])->name('perfiles.edit');
+Route::post('/{id}', [PerfilController::class, 'update'])->name('perfiles.update');
 
 
 Route::get('/categorias/index', [CategoryController::class, 'index'])->name('categorias.index');
