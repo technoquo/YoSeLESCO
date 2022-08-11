@@ -10,4 +10,10 @@ class Categoria extends Model
     use HasFactory;
 
     protected $fillable = ['category', 'icono','banner', 'status'];
+
+
+    public function perfiles()
+    {
+        return $this->hasMany(Perfil::class);
+    }
 }

@@ -27,4 +27,9 @@ class Perfil extends Model
         
         ];
 
+        public function categories()
+        {
+          return $this->belongsTo(Categoria::class);
+        }
+
 }

@@ -48,16 +48,23 @@ class CategoryController extends Controller
     public function update(CategoryValidRequest $request, $id)
     {
 
-      
-        $request->validated();
+    
+         $request->validated();
 
 
-        // Categoria::where('id', $id)->update($request->except(
-        // ['_token', '_method']
-        // ));
+        // // Categoria::where('id', $id)->update($request->except(
+        // // ['_token', '_method']
+        // // ));
+
+        // Categoria::where('id', $id)->update(
+        //     $request->status === 'on' 
+        //         ? array_replace($request->except('_token', '_method'), ['status' => true])
+        //         : array_replace($request->except('_token', '_method'), ['status' => false])
+        // );
         Categoria::where('id', $id)->update([
             'category' => $request->category,
-            'banner' => $request->imagen,
+            'icono' => $request->imagen,
+            'banner' => $request->banner,
             'status' => $request->status === 'on'
         ]);
 

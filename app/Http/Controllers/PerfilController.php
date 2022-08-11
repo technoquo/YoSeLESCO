@@ -15,9 +15,9 @@ class PerfilController extends Controller
     {
       
       
-      $perfiles = Perfil::orderBy('full_name', 'asc')->get();
+      $categorias = Categoria::orderBy('category', 'asc')->get();
       
-      return view('perfiles.index', ['perfiles' => $perfiles]);
+      return view('perfiles.index', ['categorias' => $categorias]);
     }
 
     public function create() 

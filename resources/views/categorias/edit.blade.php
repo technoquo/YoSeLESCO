@@ -21,13 +21,21 @@
                 </form>
             </div>
 
+            <div class="md:w-1/2 px-10">
+                <label for="Banner"></label>Banner</label>
+                <form action="{{ route('banners.store') }}" method="POST" enctype="multipart/form-data" id="dropzone2"
+                    class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center">
+                    @csrf
+                </form>
+            </div>
+
             <div class="md:w-1/2 p-10 bg-white  rounded-lg shadow-xl mt-10 md:mt-0">
                 <div class="mb-2 block uppercase text-gray-500 font-bold text-center">
                     <h1>Actualización de Categoría</h1>
                 </div>
 
                 @if (Session::has('success'))
-                    <div class="bg-green-400 font-bold text-white p-2">
+                    <div class="bg-green-400 font-bold text-white p-2 text-center">
                         <ul>
                             <li>{{ Session::get('success') }}</li>
                         </ul>
@@ -56,16 +64,16 @@
                         <input type="checkbox" name="status" class="default" {{ $category->status === 1 ? 'checked' : '' }} />
                     </div>
 
-
                     <div class="mb-5">
-
-                        <img src="{{ asset('uploads/' . $category['banner']) }}" alt="{{ $category->category }}">
+                        <input name="imagen" type="hidden" value="{{ $category->icono }}" />
+                        @error('imagen')
+                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
+                        @enderror
                     </div>
 
-
                     <div class="mb-5">
-                        <input name="imagen" type="hidden" value="{{ $category->banner }}" />
-                        @error('imagen')
+                        <input name="banner" type="hidden" value="{{ $category->banner }}" />
+                        @error('banner')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
                         @enderror
                     </div>
