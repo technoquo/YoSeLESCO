@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categoria;
 use Illuminate\Http\Request;
+use App\Http\Requests\CategoryValidRequest;
 
 class CategoryController extends Controller
 {
@@ -21,16 +22,14 @@ class CategoryController extends Controller
         return view('categorias.create');
     }
 
-    public function store(Request $request)
+    public function store(CategoryValidRequest $request)
     {
-            $this->validate($request, [
-            'category' => 'required',
-            'imagen' => 'required'
-        ]);
+            $request->validated();
 
         Categoria::create([
             'category' => $request->category,
-            'banner' => $request->imagen,
+            'icono' => $request->imagen,
+            'banner' => $request->banner,
             'status' => $request->status === 'on'
         ]);
 
@@ -46,14 +45,11 @@ class CategoryController extends Controller
         );
     }
 
-    public function update(Request $request, $id)
+    public function update(CategoryValidRequest $request, $id)
     {
 
       
-        $request->validate([
-            'category' => 'required',
-            'imagen' => 'required'
-        ]);
+        $request->validated();
 
 
         // Categoria::where('id', $id)->update($request->except(
@@ -65,8 +61,7 @@ class CategoryController extends Controller
             'status' => $request->status === 'on'
         ]);
 
-        $categorias = Categoria::orderBy('category', 'asc')->get();
-        return view('categorias.index', ['categorias' => $categorias]);
+         return back()->with('success','Categoría actualizado');
     
     
     }

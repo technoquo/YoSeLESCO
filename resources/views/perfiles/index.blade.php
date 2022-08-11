@@ -11,7 +11,9 @@
 
 
 @section('content')
+@auth
     <x-boton-create />
+    
     <div class="flex justify-center p-12">
         <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -69,6 +71,7 @@
 
 
     </div>
+    @endauth
 @endsection
 
 @push('scripts')

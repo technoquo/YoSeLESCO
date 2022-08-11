@@ -39,13 +39,18 @@ Route::get('/perfiles/index', [PerfilController::class, 'index'])->name('perfile
 Route::get('/perfiles/create', [PerfilController::class, 'create'])->name('perfiles.create');
 Route::post('perfiles', [PerfilController::class, 'store'])->name('perfiles.store');
 Route::get('/perfiles/{id}', [PerfilController::class, 'edit'])->name('perfiles.edit');
-Route::post('/{id}', [PerfilController::class, 'update'])->name('perfiles.update');
+Route::patch('perfliles/{id}', [PerfilController::class, 'update'])->name('perfiles.update');
 
 
 Route::get('/categorias/index', [CategoryController::class, 'index'])->name('categorias.index');
 Route::get('/categorias/create', [CategoryController::class, 'create'])->name('categorias.create');
 Route::post('/categorias', [CategoryController::class, 'store'])->name('categorias.store');
 Route::get('/edit/{id}', [CategoryController::class, 'edit'])->name('categorias.edit');
-Route::patch('/{id}', [CategoryController::class, 'update'])->name('categorias.update');
+Route::patch('categoria/{id}', [CategoryController::class, 'update'])->name('categorias.update');
+
+
+
+
 
 Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store');
+Route::post('/banners', [ImagenController::class, 'store'])->name('banners.store');

@@ -12,7 +12,9 @@
 
 
 @section('content')
+
     <x-boton-create />
+    @auth
     <div class="md:flex md:items-center">
         <div class="md:w-1/2 px-10">
             <form action="{{ route('imagenes.store') }}" method="POST" enctype="multipart/form-data" id="dropzone"
@@ -26,9 +28,18 @@
                 <h1>Actualización de Perfil</h1>
             </div>
 
+            @if (Session::has('success'))
+            <div class="bg-green-400 font-bold text-white p-2 text-center">
+                <ul>
+                    <li>{{ Session::get('success') }}</li>
+                </ul>
+            </div>
+           @endif
+    
+
             <form action="{{ route('perfiles.update', $perfil->id) }}" method="POST" novalidate>
                 @csrf
-                @method('POST')
+                @method('PATCH')
                 <div class="mb-5">
                     <label for="full_name" class="mb-2 block uppercase text-gray-500 font-bold">
                         Nombre completo
@@ -130,11 +141,11 @@
 
                 <div class="mb-5">
                     <label for="Categorias" class="mb-2 block uppercase text-gray-500 font-bold">Categoría</label>
-                    <select name="id_category"
+                    <select name="categoria_id"
                         class="bg-gray-50 border border-gray-300  text-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option value="">Seleccione</option>
                         @foreach ($categorias as $categoria)
-                            <option value="{{ $categoria->id }}" {{ $perfil->id_category === $categoria->id  ? 'selected' : '' }} >{{ $categoria->category }}</option>
+                            <option value="{{ $categoria->id }}" {{ $perfil->categoria_id === $categoria->id  ? 'selected' : '' }} >{{ $categoria->category }}</option>
                         @endforeach
                     </select>
                     @error('id_category')
@@ -163,4 +174,5 @@
               </svg></a></div>
         </div>
     </div>
+@endauth
 @endsection

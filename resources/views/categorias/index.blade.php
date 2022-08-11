@@ -11,6 +11,7 @@
 
 
 @section('content')
+@auth
     <x-boton-create />
     <div class="flex justify-center p-12">
         <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
@@ -63,6 +64,7 @@
 
 
     </div>
+    @endauth
 @endsection
 
 @push('scripts')

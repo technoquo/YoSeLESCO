@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('perfiles', function (Blueprint $table) {
             $table->id();
             $table->string('full_name');
+            $table->string('username')->unique();
             $table->string('occupation');
             $table->string('imagen');
             $table->integer('cell')->nullable();
@@ -25,7 +26,7 @@ return new class extends Migration
             $table->string('twitter')->nullable();
             $table->string('youtube')->nullable();
             $table->boolean('status');
-            $table->foreignId('id_category');
+            $table->foreignId('categoria_id');
             $table->timestamps();
         });
     }

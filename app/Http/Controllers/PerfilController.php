@@ -7,6 +7,7 @@ use App\Models\Perfil;
 use App\Models\Categoria;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Http\Requests\PerfilValidRequest;
 
 class PerfilController extends Controller
 {
@@ -25,19 +26,15 @@ class PerfilController extends Controller
         return view('perfiles.create', ['categorias' => $categorias]);
     }
 
-    public function store(Request $request)
+    public function store(PerfilValidRequest $request)
     {
+
+        $request->validated();
  
         $request->request->add(['username' => Str::slug($request->username)]);
 
         
-        $this->validate($request, [
-                'full_name' => 'required',
-                'username' => 'required',
-                'occupation' => 'required',
-                'imagen' => 'required',
-                'id_category' => 'required'
-        ]);
+     
 
         Perfil::create([
             'full_name' => $request->full_name,
@@ -51,7 +48,7 @@ class PerfilController extends Controller
             'twitter' => $request->twitter,
             'youtube' => $request->youtube,
             'status' => $request->status === 'on',
-            'id_category' => $request->id_category,
+            'categoria_id' => $request->categoria_id,
         ]);
 
 
@@ -71,17 +68,12 @@ class PerfilController extends Controller
         );
     }
 
-    public function update(Request $request, $id)
+    public function update(PerfilValidRequest $request, $id)
     {
 
       
-        $this->validate($request, [
-            'full_name' => 'required',
-            'username' => 'required',
-            'occupation' => 'required',
-            'imagen' => 'required',
-            'id_category' => 'required'
-    ]);
+        $request->validated();
+ 
 
      
     Perfil::where('id', $id)->update(
@@ -89,7 +81,7 @@ class PerfilController extends Controller
             ? array_replace($request->except('_token', '_method'), ['status' => true])
             : array_replace($request->except('_token', '_method'), ['status' => false])
     );
-        return redirect()->route('perfiles.index');
+        return back()->with('success','Perfil actualizado');
     
     
     }

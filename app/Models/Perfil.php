@@ -23,7 +23,7 @@ class Perfil extends Model
           'youtube',
           'status',
           'username',
-          'id_category'       
+          'categoria_id'       
         
         ];
 

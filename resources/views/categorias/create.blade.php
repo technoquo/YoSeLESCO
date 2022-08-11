@@ -11,13 +11,23 @@
 
 
 @section('content')
+@auth
 <x-boton-create/>
     <div class="md:flex md:items-center">
         <div class="md:w-1/2 px-10">
+            <label for="Icono"></label>Icono</label>
             <form action="{{ route('imagenes.store') }}" method="POST" enctype="multipart/form-data" id="dropzone" class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center">
                 @csrf
             </form>
         </div>
+
+        <div class="md:w-1/2 px-10">
+            <label for="Banner"></label>Banner</label>
+            <form action="{{ route('banners.store') }}" method="POST" enctype="multipart/form-data" id="dropzone2" class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center">
+                @csrf
+            </form>
+        </div>
+
 
         <div class="md:w-1/2 p-10 bg-white  rounded-lg shadow-xl mt-10 md:mt-0">
             <div class="mb-2 block uppercase text-gray-500 font-bold text-center">
@@ -63,6 +73,17 @@
                     @enderror
                 </div>
 
+                <div class="mb-5">
+                    <input 
+                        name="banner"
+                        type="hidden"
+                        value="{{ old('banner') }}"
+                    />
+                    @error('banner')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
+                    @enderror
+                </div>
+
                 <input
                     type="submit"
                     value="Crear Categoría"
@@ -71,4 +92,5 @@
             </form>
         </div>
     </div>
+    @endauth
 @endsection
