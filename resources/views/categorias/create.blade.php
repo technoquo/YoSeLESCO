@@ -45,12 +45,50 @@
                         name="category"
                         type="text"
                         placeholder="Nombre de categoría"
-                        class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                        class="border p-3 w-full rounded-lg @error('category') border-red-500 @enderror"
                         value="{{ old('category') }}"
                         autocomplete="off"
                     />
 
                     @error('category')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
+                    @enderror
+                </div>
+
+                <div class="mb-5">
+                    <label for="Slug" class="mb-2 block uppercase text-gray-500 font-bold">
+                          Slug
+                    </label>
+                    <input 
+                        id="slug"
+                        name="slug"
+                        type="text"
+                        placeholder="Slug"
+                        class="border p-3 w-full rounded-lg @error('slug') border-red-500 @enderror"
+                        value="{{ old('slug') }}"
+                        autocomplete="off"
+                    />
+
+                    @error('slug')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
+                    @enderror
+                </div>
+
+                <div class="mb-5">
+                    <label for="Color" class="mb-2 block uppercase text-gray-500 font-bold">
+                           Color específico para Categoría
+                    </label>
+                    <input 
+                        id="color"
+                        name="color"
+                        type="text"
+                        placeholder="color"
+                        class="border p-3 w-full rounded-lg @error('color') border-red-500 @enderror"
+                        value="{{ old('category') }}"
+                        autocomplete="off"
+                    />
+
+                    @error('color')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
                     @enderror
                 </div>

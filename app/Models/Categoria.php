@@ -9,7 +9,7 @@ class Categoria extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['category', 'icono','banner', 'status'];
+    protected $fillable = ['category', 'icono','banner', 'color', 'slug', 'status'];
 
 
     public function perfiles()

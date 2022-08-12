@@ -75,7 +75,7 @@ class PerfilController extends Controller
         $request->validated();
  
 
-     
+        $request->request->add(['username' => Str::slug($request->username)]);
     Perfil::where('id', $id)->update(
         $request->status === 'on' 
             ? array_replace($request->except('_token', '_method'), ['status' => true])

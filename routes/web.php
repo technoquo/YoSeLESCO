@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\LogoutController;
@@ -24,9 +25,9 @@ use App\Http\Controllers\DrashboardController;
 // });
 
 
-Route::get('/', function () {
-    return view('home');
-});
+
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/categoria/{slug}', [HomeController::class, 'show'])->name('principal.show');;
 
 Route::get('/drashboard', [DrashboardController::class, 'index'])->name('drashboard');
 

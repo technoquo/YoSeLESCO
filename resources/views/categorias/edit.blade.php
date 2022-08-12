@@ -35,13 +35,13 @@
                 </div>
 
                 @if (Session::has('success'))
-                    <div class="bg-green-400 font-bold text-white p-2 text-center">
+                    <div class="bg-green-400 font-bold text-white p-2 text-center mt-10">
                         <ul>
                             <li>{{ Session::get('success') }}</li>
                         </ul>
                     </div>
                 @endif
-
+              <div class="mt-10">
                 <form action="{{ route('categorias.update', $category->id) }}" method="POST" novalidate>
                     @csrf
                     @method('PATCH')
@@ -49,9 +49,35 @@
                         <label for="Categoria" class="mb-2 block uppercase text-gray-500 font-bold">
                             Nombre de categoría
                         </label>
-                        <input id="category" name="category" type="text" placeholder="Nombre de categoría"
-                            class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                        <input id="category" name="category" type="text" 
+                            class="border p-3 w-full rounded-lg @error('category') border-red-500 @enderror"
                             value="{{ $category->category }}" autocomplete="off" />
+
+                        @error('category')
+                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
+                        @enderror
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="slug" class="mb-2 block uppercase text-gray-500 font-bold">
+                           Slug
+                        </label>
+                        <input id="slug" name="slug" type="text" 
+                            class="border p-3 w-full rounded-lg @error('slug') border-red-500 @enderror"
+                            value="{{ $category->slug }}" autocomplete="off" />
+
+                        @error('slug')
+                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
+                        @enderror
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="Color" class="mb-2 block uppercase text-gray-500 font-bold">
+                            Color específico para Categoría
+                        </label>
+                        <input id="color" name="color" type="text" 
+                            class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                            value="{{ $category->color }}" autocomplete="off" />
 
                         @error('category')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
@@ -81,6 +107,7 @@
                     <input type="submit" value="Actualizar Categoría"
                         class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg" />
                 </form>
+            </div>
                 <div class="flex justify-center mt-2"><a href="{{ route('categorias.index') }}"><svg
                             xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">

@@ -95,7 +95,7 @@
     </header>
 </nav>
 <a id="backtop"></a>
-<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
+<body class="bg-white h-screen antialiased leading-none font-sans">
   
     @yield('content')
 </body>

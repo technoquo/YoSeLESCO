@@ -29,14 +29,14 @@
             </div>
 
             @if (Session::has('success'))
-            <div class="bg-green-400 font-bold text-white p-2 text-center">
+            <div class="bg-green-400 font-bold text-white p-2 text-center mt-10">
                 <ul>
                     <li>{{ Session::get('success') }}</li>
                 </ul>
             </div>
            @endif
     
-
+           <div class="mt-10">
             <form action="{{ route('perfiles.update', $perfil->id) }}" method="POST" novalidate>
                 @csrf
                 @method('PATCH')
@@ -169,6 +169,7 @@
                 <input type="submit" value="Crear Perfil"
                     class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg" />
             </form>
+           </div>
             <div class="flex justify-center mt-2"><a href="{{ route('perfiles.index') }}"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
               </svg></a></div>

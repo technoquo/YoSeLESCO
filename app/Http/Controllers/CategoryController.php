@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Requests\CategoryValidRequest;
 
@@ -26,10 +27,14 @@ class CategoryController extends Controller
     {
             $request->validated();
 
+            $request->request->add(['slug' => Str::slug($request->slug)]);
+
         Categoria::create([
             'category' => $request->category,
+            'slug' => $request->slug,
             'icono' => $request->imagen,
             'banner' => $request->banner,
+            'color' => $request->color,
             'status' => $request->status === 'on'
         ]);
 
@@ -61,10 +66,13 @@ class CategoryController extends Controller
         //         ? array_replace($request->except('_token', '_method'), ['status' => true])
         //         : array_replace($request->except('_token', '_method'), ['status' => false])
         // );
+        $request->request->add(['slug' => Str::slug($request->slug)]);
         Categoria::where('id', $id)->update([
             'category' => $request->category,
+            'slug' => $request->slug,
             'icono' => $request->imagen,
             'banner' => $request->banner,
+            'color' => $request->color,
             'status' => $request->status === 'on'
         ]);
 

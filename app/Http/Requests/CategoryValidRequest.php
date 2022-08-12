@@ -25,8 +25,10 @@ class CategoryValidRequest extends FormRequest
     {
         return [
             'category' => 'required',
+            'slug' => 'required',
             'imagen' => 'required',
-            'banner' => 'required'
+            'banner' => 'required',
+            'color' => 'required'
         ];
     }
 }
