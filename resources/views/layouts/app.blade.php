@@ -105,22 +105,22 @@
         <div class="leading-extra-9">
             <div class="items-center space-x-1">
                 <div class="md:flex">
-                    <div class=""><a class="no-underline mr-4 hover:text-red-500" target="_blank"
+                    <div class="h-12"><a class="no-underline mr-4 hover:text-red-500" target="_blank"
                             href="https://www.handsonlesco.com/">¿Quienés somos?</a></div>
-                    <div class=""><a class="no-underline  mr-4 hover:text-red-500" target="_blank"
+                    <div class="h-12"><a class="no-underline  mr-4 hover:text-red-500" target="_blank"
                             href="https://handsonlesco.com/#el-equipo">El Equipo</a></div>
-                    <div class=""><a class="no-underline  mr-4 hover:text-red-500" target="_blank"
+                    <div class="h-12"><a class="no-underline  mr-4 hover:text-red-500" target="_blank"
                             href="https://www.handsonlesco.com/cursos/">Cursos de LESCO en Costa Rica</a></div>
-                    <div class=""><a class="no-underline  mr-4 hover:text-red-500" target="_blank"
+                    <div class="h-12"><a class="no-underline  mr-4 hover:text-red-500" target="_blank"
                             href="https://www.handsonlesco.com/blog/">Blog</a></div>
-                    <div class=""><a class="no-underline  mr-4 hover:text-red-500" target="_blank"
+                    <div class="h-12"><a class="no-underline  mr-4 hover:text-red-500" target="_blank"
                             href="https://www.handsonlesco.com/contactanos/">Contactános</a> </div>
 
                 </div>
             </div>
 
         </div>
-        <div class=" md:ml-32">
+        <div class=" md:ml-32 mt-5">
             <a href="{{ url('/') }}" class="no-underline">
                 <img class="inicio" src="{{ asset('img/footer-logo.png') }}" alt="Hands On">
             </a>

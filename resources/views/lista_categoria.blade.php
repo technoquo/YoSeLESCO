@@ -14,12 +14,107 @@
         <div class="flex justify-center mt-10">
             <img src="{{ asset('uploads') . '/' . $banner['banner'] }}" />
         </div>
-        <div class="grid md:grid-cols-3 gap-4">
+        <div class="grid md:grid-cols-3 gap-4 place-items-center mt-12">
             @foreach ($banner->perfiles as $perfil)
-             
-                <img class="rounded-full" src="{{ asset('uploads') . '/' . $perfil->imagen }}" alt="Imagen del banner {{ $perfil->full_name }}">
-          
-                @endforeach
+                <div class="max-w-sm text-center">
+                    <div class="flex justify-center">
+                        <img class="rounded-full w-52" src="{{ asset('uploads') . '/' . $perfil->imagen }}"
+                            alt="Imagen del banner {{ $perfil->full_name }}">
+                    </div>
+                    <div class="p-5">
+
+                        <h5 class="text-2xl" style="color: {{ $banner->color }}">{{ $perfil->full_name }}</h5>
+
+                        <div class="mb-3  font-semibold text-lg" style="color: {{ $banner->color }}">
+                            {{ $perfil->occupation }}.</div>
+
+                        @if ($perfil->cell != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                    <img class="w-7"
+                                    src="{{ asset('img/contactos') . '/whatsapp-celeste.png' }}" />
+                                    @else
+                                    <img class="w-7"
+                                    src="{{ asset('img/contactos') . '/whatsapp-verde.png' }}" />
+                                    @endif                                   
+                                </div>
+                                <div class="mt-2 ml-2">{{ $perfil->cell }}</div>
+                            </div>
+                        @endif
+
+                        @if ($perfil->instagram != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                    <img class="w-7"
+                                    src="{{ asset('img/contactos') . '/instagram-celeste.png' }}" />
+                                    @else
+                                    <img class="w-7"
+                                    src="{{ asset('img/contactos') . '/instagram-verde.png' }}" />
+                                    @endif                                   
+                                </div>
+                                <div class="mt-2 ml-2"><a
+                                        href="https://www.instagram.com/{{ str_replace('@', '', $perfil->instagram) }}"
+                                        target="_blank">{{ $perfil->instagram }}</a></div>
+                            </div>
+                        @endif
+                        @if ($perfil->facebook != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                    <img class="w-7"
+                                    src="{{ asset('img/contactos') . '/facebook-celeste.png' }}" />
+                                    @else
+                                    <img class="w-7"
+                                    src="{{ asset('img/contactos') . '/facebook-verde.png' }}" />
+                                    @endif                                   
+                                </div>
+                                <div class="mt-2 ml-2"><a
+                                        href="https://www.facebook.com/{{ str_replace('@', '', $perfil->facebook) }}"
+                                        target="_blank">{{ $perfil->facebook }}</a></div>
+                            </div>
+                        @endif
+                        @if ($perfil->twitter != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                    <img class="w-7"
+                                    src="{{ asset('img/contactos') . '/twitter-celeste.png' }}" />
+                                    @else
+                                    <img class="w-7"
+                                    src="{{ asset('img/contactos') . '/twitter-verde.png' }}" />
+                                    @endif                                   
+                                </div>
+                                <div class="mt-2 ml-2"><a
+                                        href="https://www.instagram.com/{{ str_replace('@', '', $perfil->twitter) }}"
+                                        target="_blank">{{ $perfil->twitter }}</a></div>
+                            </div>
+                        @endif
+                        @if ($perfil->email != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                    <img class="w-7"
+                                    src="{{ asset('img/contactos') . '/correo-celeste.png' }}" />
+                                    @else
+                                    <img class="w-7"
+                                    src="{{ asset('img/contactos') . '/correo-verde.png' }}" />
+                                    @endif                                   
+                                </div>
+                                <div class="mt-2 ml-2"><a href="mailto:{{ $perfil->email }}">{{ $perfil->email }}</a></div>
+                            </div>
+                        @endif
+
+                        <div class="mb-3 "></div>
+                        <a href="#"
+                            class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white focus:ring-4 focus:outline-none rounded-md"
+                            style="background-color: {{ $banner->color }}">
+                            Ver video
+                        </a>
+                    </div>
+                </div>
+            @endforeach
         </div>
 
 

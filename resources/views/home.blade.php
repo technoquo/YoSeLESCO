@@ -16,7 +16,7 @@
 
                         <img class="w-20" src="{{ asset('uploads') . '/' . $categoria->icono }}"
                             alt="Imagen del banner {{ $categoria->category }}">
-                        <div class="uppercase text-white font-bold mt-10 text-xl ml-5">{{ $categoria->category }}</div>
+                        <div class="uppercase text-white font-bold mt-10  ml-5">{{ $categoria->category }}</div>
 
 
 
