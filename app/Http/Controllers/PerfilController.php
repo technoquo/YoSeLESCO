@@ -43,7 +43,7 @@ class PerfilController extends Controller
             'imagen' => $request->imagen,
             'cell' => $request->cell,
             'email' => $request->email,
-            'instagram' => $request->instragam,
+            'instagram' => $request->instagram,
             'facebook' => $request->facebook,
             'twitter' => $request->twitter,
             'youtube' => $request->youtube,
