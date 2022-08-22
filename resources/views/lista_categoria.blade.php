@@ -37,7 +37,7 @@
                                         <img class="w-7" src="{{ asset('img/contactos') . '/whatsapp-verde.png' }}" />
                                     @endif
                                 </div>
-                                <div class="mt-2 ml-2">{{ $perfil->cell }}</div>
+                                <div class="mt-2 ml-2"><a href="https://wa.me/{{ $perfil->cell }}" target="_blank">{{ $perfil->cell }}</a></div>
                             </div>
                         @endif
 
