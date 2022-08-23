@@ -14,7 +14,7 @@
         <div class="flex justify-center mt-10">
             <img src="{{ asset('uploads') . '/' . $banner['banner'] }}" />
         </div>
-        <div class="grid md:grid-cols-3 gap-4 place-items-center mt-12">
+        <div class="grid md:grid-cols-3 gap-4 mt-12">
             @foreach ($banner->perfiles as $perfil)
                 <div class="max-w-sm text-center">
                     <div class="flex justify-center">
