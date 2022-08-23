@@ -12,7 +12,7 @@
     <meta name="keywords_news" content="Yo sé LESCO, Hands On LESCO" />
     <meta property="og:title" content="Yo sé LESCO">
     <meta property="og:description"
-        content="Nuestro nuevo proyecto en Hands-On es el desarrollo de un Yo sé LESCO (Lengua de Señas Costarricense) de acceso gratuito para toda la comunidad, para que estudiantes y personas interesadas, o personas usuarias de la LESCO, puedan utilizar como material de repaso, aprendizaje y consulta en línea">
+        content="Con este nuevo sello distinguimos a quienes se han capacitado con nosotros para comunicarse de forma fluida en Lengua de Señas 🤟😍.">
     <meta property="og:image" content="{{ asset('img/yoselescobannser.jpg') }}"/>
     <meta property="og:image:width" content="654" />
     <meta property="og:image:height" content="445" />
@@ -21,7 +21,7 @@
     <meta property="twitter:card" content="Yo sé LESCO">
     <meta property="twitter:title" content=" Yo sé LESCO">
     <meta property="twitter:description"
-        content="Nuestro nuevo proyecto en Hands-On es el desarrollo de un Yo sé LESCO (Lengua de Señas Costarricense) de acceso gratuito para toda la comunidad.">
+        content="Con este nuevo sello distinguimos a quienes se han capacitado con nosotros para comunicarse de forma fluida en Lengua de Señas 🤟😍.">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon_handson.png" />
     <link rel="stylesheet" href="{{ asset('css/backtop.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
