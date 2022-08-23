@@ -13,9 +13,9 @@
     <meta property="og:title" content="Yo sé LESCO">
     <meta property="og:description"
         content="Nuestro nuevo proyecto en Hands-On es el desarrollo de un Yo sé LESCO (Lengua de Señas Costarricense) de acceso gratuito para toda la comunidad, para que estudiantes y personas interesadas, o personas usuarias de la LESCO, puedan utilizar como material de repaso, aprendizaje y consulta en línea">
-    <meta property="og:image" content="http://handsonlesco.com/wp-content/uploads/2021/09/hero-section-img.png" />
-    <meta property="og:image:width" content="1500" />
-    <meta property="og:image:height" content="843" />
+    <meta property="og:image" content="{{ asset('img/yoselescobannser.jpg') }}"/>
+    <meta property="og:image:width" content="654" />
+    <meta property="og:image:height" content="445" />
     <meta property="twitter:card" content="Yo sé LESCO">
     <meta property="twitter:title" content=" Yo sé LESCO">
     <meta property="twitter:description"
