@@ -16,6 +16,8 @@
     <meta property="og:image" content="{{ asset('img/yoselescobannser.jpg') }}"/>
     <meta property="og:image:width" content="654" />
     <meta property="og:image:height" content="445" />
+    <meta property="og:url" content="https://yoselesco.handsonlesco.com/" />
+    <meta property="og:type" content="website" />
     <meta property="twitter:card" content="Yo sé LESCO">
     <meta property="twitter:title" content=" Yo sé LESCO">
     <meta property="twitter:description"
