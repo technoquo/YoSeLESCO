@@ -157,7 +157,7 @@
                             </div>
                         @endif
 
-                        <div class="mb-3 invisible">
+                        <div class="mb-3 hidden">
                             <a href="#"
                                 class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white focus:ring-4 focus:outline-none rounded-md"
                                 style="background-color: {{ $banner->color }}">
