@@ -22,7 +22,7 @@
     <meta property="twitter:title" content=" Yo sé LESCO">
     <meta property="twitter:description"
         content="Con este nuevo sello distinguimos a quienes se han capacitado con nosotros para comunicarse de forma fluida en Lengua de Señas 🤟😍.">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon_handson.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ env('APP_URL') }}/img/favicon_handson.png" />
     <link rel="stylesheet" href="{{ asset('css/backtop.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
