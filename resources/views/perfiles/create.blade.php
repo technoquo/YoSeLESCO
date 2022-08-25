@@ -153,7 +153,7 @@
                     <label for="Linkedin" class="mb-2 block uppercase text-gray-500 font-bold">
                         Linkedin
                     </label>
-                    <input id="linkedin" name="linkedin" type="text" placeholder="Google"
+                    <input id="linkedin" name="linkedin" type="text" placeholder="Linkedin"
                         class="border p-3 w-full rounded-lg "
                         value="{{ old('linkedin') }}" autocomplete="off" />
                      
@@ -163,7 +163,7 @@
                     <label for="Telegram" class="mb-2 block uppercase text-gray-500 font-bold">
                         Telegram
                     </label>
-                    <input id="telegram" name="telegram" type="text" placeholder="Google"
+                    <input id="telegram" name="telegram" type="text" placeholder="Telegram"
                         class="border p-3 w-full rounded-lg "
                         value="{{ old('telegram') }}" autocomplete="off" />
                      

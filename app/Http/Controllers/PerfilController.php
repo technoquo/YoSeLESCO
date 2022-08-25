@@ -50,6 +50,7 @@ class PerfilController extends Controller
             'google' => $request->google,
             'linkedin' => $request->linkedin,
             'telegram' => $request->telegram,
+            'websiste' => $request->websiste,
             'status' => $request->status === 'on',
             'categoria_id' => $request->categoria_id,
         ]);
