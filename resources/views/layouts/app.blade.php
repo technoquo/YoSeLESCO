@@ -32,7 +32,15 @@
  
         <title>Hands On - @yield('titulo')</title>
   
-   
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6STHJM0HZ1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6STHJM0HZ1');
+</script>
 
 </head>
 <nav>
