@@ -100,6 +100,16 @@
                 </div>
 
                 <div class="mb-5">
+                    <label for="Website" class="mb-2 block uppercase text-gray-500 font-bold">
+                        Website
+                    </label>
+                    <input id="website" name="website" type="text"value="{{ $perfil->website }}"
+                        class="border p-3 w-full rounded-lg "
+                        value="{{ old('website') }}" autocomplete="off" />
+                    
+                </div>
+
+                <div class="mb-5">
                     <label for="Instagram" class="mb-2 block uppercase text-gray-500 font-bold">
                         Instagram
                     </label>

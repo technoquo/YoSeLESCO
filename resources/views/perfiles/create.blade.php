@@ -90,6 +90,16 @@
                 </div>
 
                 <div class="mb-5">
+                    <label for="Website" class="mb-2 block uppercase text-gray-500 font-bold">
+                        Página Web
+                    </label>
+                    <input id="website" name="website" type="text" placeholder="Website"
+                        class="border p-3 w-full rounded-lg "
+                        value="{{ old('website') }}" autocomplete="off" />
+                    
+                </div>
+
+                <div class="mb-5">
                     <label for="Instagram" class="mb-2 block uppercase text-gray-500 font-bold">
                         Instagram
                     </label>

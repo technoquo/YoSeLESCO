@@ -42,6 +42,16 @@
                             </div>
                         @endif
 
+                        @if ($perfil->website != '')
+                        <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div>
+                              Pagina Web:
+                            </div>
+                            <div class="mt-2 ml-2"><a href="{{ $perfil->website }}"
+                                    target="_blank">{{ $perfil->website }}</a></div>
+                            </div>
+                    @endif
+
                         @if ($perfil->instagram != '')
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
@@ -98,6 +108,7 @@
                                 </div>
                             </div>
                         @endif
+                        
                         @if ($perfil->youtube != '')
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>

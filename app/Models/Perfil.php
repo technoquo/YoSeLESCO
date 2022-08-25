@@ -24,6 +24,7 @@ class Perfil extends Model
           'google',
           'linkedin',
           'telegram',
+          'webiste',
           'status',
           'username',
           'categoria_id'       
