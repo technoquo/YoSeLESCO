@@ -32,9 +32,11 @@
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/whatsapp-celeste.png' }}" alt="Whatsapp" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/whatsapp-celeste.png' }}"
+                                            alt="Whatsapp" />
                                     @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/whatsapp-verde.png' }}" alt="Whatsapp" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/whatsapp-verde.png' }}"
+                                            alt="Whatsapp" />
                                     @endif
                                 </div>
                                 <div class="mt-2 ml-2"><a href="https://wa.me/{{ $perfil->cell }}"
@@ -43,23 +45,24 @@
                         @endif
 
                         @if ($perfil->website != '')
-                        <div class="flex justify-center" style="color: {{ $banner->color }}">
-                            <div>
-                              Pagina Web:
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    Pagina Web:
+                                </div>
+                                <div class="mt-2 ml-2"><a href="{{ $perfil->website }}"
+                                        target="_blank">{{ $perfil->website }}</a></div>
                             </div>
-                            <div class="mt-2 ml-2"><a href="{{ $perfil->website }}"
-                                    target="_blank">{{ $perfil->website }}</a></div>
-                            </div>
-                    @endif
+                        @endif
 
                         @if ($perfil->instagram != '')
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
-                                        <img class="w-7"
-                                            src="{{ asset('img/contactos') . '/instagram-celeste.png' }}"  alt="Instagram"/>
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/instagram-celeste.png' }}"
+                                            alt="Instagram" />
                                     @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/instagram-verde.png' }}"  alt="Instagram" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/instagram-verde.png' }}"
+                                            alt="Instagram" />
                                     @endif
                                 </div>
                                 <div class="mt-2 ml-2"><a
@@ -71,9 +74,11 @@
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/facebook-celeste.png' }}"  alt="Facebook" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/facebook-celeste.png' }}"
+                                            alt="Facebook" />
                                     @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/facebook-verde.png' }}"  alt="Facebook"/>
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/facebook-verde.png' }}"
+                                            alt="Facebook" />
                                     @endif
                                 </div>
                                 <div class="mt-2 ml-2"><a
@@ -85,9 +90,11 @@
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/twitter-celeste.png' }}"  alt="Twitter" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/twitter-celeste.png' }}"
+                                            alt="Twitter" />
                                     @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/twitter-verde.png' }}"  alt="Twitter" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/twitter-verde.png' }}"
+                                            alt="Twitter" />
                                     @endif
                                 </div>
                                 <div class="mt-2 ml-2"><a
@@ -99,23 +106,27 @@
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/correo-celeste.png' }}"  alt="Email" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/correo-celeste.png' }}"
+                                            alt="Email" />
                                     @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/correo-verde.png' }}"   alt="Email"/>
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/correo-verde.png' }}"
+                                            alt="Email" />
                                     @endif
                                 </div>
                                 <div class="mt-2 ml-2"><a href="mailto:{{ $perfil->email }}">{{ $perfil->email }}</a>
                                 </div>
                             </div>
                         @endif
-                        
+
                         @if ($perfil->youtube != '')
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/youtube-celeste.png' }}"  alt="Youtube" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/youtube-celeste.png' }}"
+                                            alt="Youtube" />
                                     @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/youtube-verde.png' }}"  alt="Youtube" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/youtube-verde.png' }}"
+                                            alt="Youtube" />
                                     @endif
                                 </div>
                                 <div class="mt-2 ml-2"><a href="{{ $perfil->youtube }}"
@@ -128,9 +139,11 @@
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-celeste.png' }}"  alt="Google"/>
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-celeste.png' }}"
+                                            alt="Google" />
                                     @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-verde.png' }}"  alt="Google"/>
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-verde.png' }}"
+                                            alt="Google" />
                                     @endif
                                 </div>
                                 <div class="mt-2 ml-2">{{ $perfil->google }}</a>
@@ -142,9 +155,11 @@
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/linkedin-celeste.png' }}"  alt="linkedin" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/linkedin-celeste.png' }}"
+                                            alt="linkedin" />
                                     @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/linkedin-verde.png' }}"  alt="linkedin" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/linkedin-verde.png' }}"
+                                            alt="linkedin" />
                                     @endif
                                 </div>
                                 <div class="mt-2 ml-2"><a href="">{{ $perfil->linkedin }}</a></div>
@@ -155,16 +170,18 @@
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/telegram-celeste.png' }}"   alt="Telegram"/>
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/telegram-celeste.png' }}"
+                                            alt="Telegram" />
                                     @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/telegram-verde.png' }}" alt="Telegram" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/telegram-verde.png' }}"
+                                            alt="Telegram" />
                                     @endif
                                 </div>
-                                <div class="mt-2 ml-2">
-                                    <div class="mt-2 ml-2"><a
-                                            href="https://t.me/{{ str_replace('@', '', $perfil->telegram) }}"
-                                            target="_blank">{{ $perfil->telegram }}</a></div>
+                                <div class="mt-2 ml-2"><a
+                                        href="https://t.me/{{ str_replace('@', '', $perfil->telegram) }}"
+                                        target="_blank">{{ $perfil->telegram }}</a>
                                 </div>
+
                             </div>
                         @endif
 
