@@ -21,6 +21,9 @@ class Perfil extends Model
           'facebook',
           'twitter',
           'youtube',
+          'google',
+          'linkedin',
+          'telegram',
           'status',
           'username',
           'categoria_id'       

@@ -37,7 +37,8 @@
                                         <img class="w-7" src="{{ asset('img/contactos') . '/whatsapp-verde.png' }}" />
                                     @endif
                                 </div>
-                                <div class="mt-2 ml-2"><a href="https://wa.me/{{ $perfil->cell }}" target="_blank">{{ $perfil->cell }}</a></div>
+                                <div class="mt-2 ml-2"><a href="https://wa.me/{{ $perfil->cell }}"
+                                        target="_blank">{{ $perfil->cell }}</a></div>
                             </div>
                         @endif
 
@@ -98,14 +99,73 @@
                             </div>
                         @endif
                         @if ($perfil->youtube != '')
-                        <div class="mb-3">
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/youtube-celeste.png' }}" />
+                                    @else
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/youtube-verde.png' }}" />
+                                    @endif
+                                </div>
+                                <div class="mt-2 ml-2"><a href="{{ $perfil->youtube }}"
+                                        target="_blank">{{ $perfil->youtube }}</a>
+                                </div>
+                            </div>
+                        @endif
+
+                        @if ($perfil->google != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-celeste.png' }}" />
+                                    @else
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-verde.png' }}" />
+                                    @endif
+                                </div>
+                                <div class="mt-2 ml-2">{{ $perfil->google }}</a>
+                                </div>
+                            </div>
+                        @endif
+
+                        @if ($perfil->linkedin != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/linkedin-celeste.png' }}" />
+                                    @else
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/linkedin-verde.png' }}" />
+                                    @endif
+                                </div>
+                                <div class="mt-2 ml-2"><a href="">{{ $perfil->linkedin }}</a></div>
+                            </div>
+                        @endif
+
+                        @if ($perfil->telegram != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/telegram-celeste.png' }}" />
+                                    @else
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/telegram-verde.png' }}" />
+                                    @endif
+                                </div>
+                                <div class="mt-2 ml-2">
+                                    <div class="mt-2 ml-2"><a
+                                            href="https://t.me/{{ str_replace('@', '', $perfil->telegram) }}"
+                                            target="_blank">{{ $perfil->telegram }}</a></div>
+                                </div>
+                            </div>
+                        @endif
+
+                        <div class="mb-3 invisible">
                             <a href="#"
                                 class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white focus:ring-4 focus:outline-none rounded-md"
                                 style="background-color: {{ $banner->color }}">
                                 Ver video
                             </a>
                         </div>
-                        @endif
+
+
                     </div>
                 </div>
             @endforeach

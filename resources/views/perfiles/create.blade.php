@@ -130,6 +130,36 @@
                 </div>
 
                 <div class="mb-5">
+                    <label for="Google" class="mb-2 block uppercase text-gray-500 font-bold">
+                        Google
+                    </label>
+                    <input id="google" name="google" type="text" placeholder="Google"
+                        class="border p-3 w-full rounded-lg "
+                        value="{{ old('google') }}" autocomplete="off" />
+                     
+                </div>
+
+                <div class="mb-5">
+                    <label for="Linkedin" class="mb-2 block uppercase text-gray-500 font-bold">
+                        Linkedin
+                    </label>
+                    <input id="linkedin" name="linkedin" type="text" placeholder="Google"
+                        class="border p-3 w-full rounded-lg "
+                        value="{{ old('linkedin') }}" autocomplete="off" />
+                     
+                </div>
+
+                <div class="mb-5">
+                    <label for="Telegram" class="mb-2 block uppercase text-gray-500 font-bold">
+                        Telegram
+                    </label>
+                    <input id="telegram" name="telegram" type="text" placeholder="Google"
+                        class="border p-3 w-full rounded-lg "
+                        value="{{ old('telegram') }}" autocomplete="off" />
+                     
+                </div>
+
+                <div class="mb-5">
                     <label for="Categorias" class="mb-2 block uppercase text-gray-500 font-bold">Categoría</label>
                     <select name="categoria_id"
                         class="bg-gray-50 border border-gray-300  text-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">

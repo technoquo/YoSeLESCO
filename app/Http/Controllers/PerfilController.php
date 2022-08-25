@@ -47,6 +47,9 @@ class PerfilController extends Controller
             'facebook' => $request->facebook,
             'twitter' => $request->twitter,
             'youtube' => $request->youtube,
+            'google' => $request->google,
+            'linkedin' => $request->linkedin,
+            'telegram' => $request->telegram,
             'status' => $request->status === 'on',
             'categoria_id' => $request->categoria_id,
         ]);
