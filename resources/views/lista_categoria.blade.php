@@ -30,7 +30,7 @@
 
 
                         @if ($perfil->cell != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div class="flex justify-center m-3" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
                                         <img class="w-7" src="{{ asset('img/contactos') . '/whatsapp-celeste.png' }}"
@@ -46,7 +46,7 @@
                         @endif
 
                         @if ($perfil->google != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div class="flex justify-center m-3" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
                                         <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-celeste.png' }}"
@@ -61,7 +61,7 @@
                             </div>
                         @endif
                         @if ($perfil->facebook != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div class="flex justify-center m-3" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
                                         <img class="w-7" src="{{ asset('img/contactos') . '/facebook-celeste.png' }}"
@@ -77,7 +77,7 @@
                             </div>
                         @endif
                         @if ($perfil->instagram != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div class="flex justify-center m-3" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
                                         <img class="w-7" src="{{ asset('img/contactos') . '/instagram-celeste.png' }}"
@@ -93,7 +93,7 @@
                             </div>
                         @endif
                         @if ($perfil->youtube != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div class="flex justify-center" m-3 style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
                                         <img class="w-7" src="{{ asset('img/contactos') . '/youtube-celeste.png' }}"
@@ -110,7 +110,7 @@
                         @endif
 
                         @if ($perfil->website != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div class="flex justify-center m-3" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
                                         <img class="w-7" src="{{ asset('img/contactos') . '/pagweb-celeste.png' }}"
@@ -125,7 +125,7 @@
                             </div>
                         @endif
                         @if ($perfil->twitter != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div class="flex justify-center m-3" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
                                         <img class="w-7" src="{{ asset('img/contactos') . '/twitter-celeste.png' }}"
@@ -141,7 +141,7 @@
                             </div>
                         @endif
                         @if ($perfil->email != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div class="flex justify-center m-3" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
                                         <img class="w-7" src="{{ asset('img/contactos') . '/correo-celeste.png' }}"
@@ -155,12 +155,8 @@
                                 </div>
                             </div>
                         @endif
-
-
-
-
                         @if ($perfil->linkedin != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div class="flex justify-center m-3" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
                                         <img class="w-7" src="{{ asset('img/contactos') . '/linkedin-celeste.png' }}"
@@ -173,9 +169,8 @@
                                 <div class="mt-2 ml-2"><a href="">{{ $perfil->linkedin }}</a></div>
                             </div>
                         @endif
-
                         @if ($perfil->telegram != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                            <div class="flex justify-center m-3" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
                                         <img class="w-7" src="{{ asset('img/contactos') . '/telegram-celeste.png' }}"
