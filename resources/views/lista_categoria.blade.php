@@ -28,6 +28,7 @@
                         <div class="mb-3  font-semibold text-lg" style="color: {{ $banner->color }}">
                             {{ $perfil->occupation }}.</div>
 
+
                         @if ($perfil->cell != '')
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
@@ -44,30 +45,19 @@
                             </div>
                         @endif
 
-                        @if ($perfil->website != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
-                                <div>
-                                    Pagina Web:
-                                </div>
-                                <div class="mt-2 ml-2"><a href="{{ $perfil->website }}"
-                                        target="_blank">{{ $perfil->website }}</a></div>
-                            </div>
-                        @endif
-
-                        @if ($perfil->instagram != '')
+                        @if ($perfil->google != '')
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
                                 <div>
                                     @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/instagram-celeste.png' }}"
-                                            alt="Instagram" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-celeste.png' }}"
+                                            alt="Google" />
                                     @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/instagram-verde.png' }}"
-                                            alt="Instagram" />
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-verde.png' }}"
+                                            alt="Google" />
                                     @endif
                                 </div>
-                                <div class="mt-2 ml-2"><a
-                                        href="https://www.instagram.com/{{ str_replace('@', '', $perfil->instagram) }}"
-                                        target="_blank">{{ $perfil->instagram }}</a></div>
+                                <div class="mt-2 ml-2">{{ $perfil->google }}</a>
+                                </div>
                             </div>
                         @endif
                         @if ($perfil->facebook != '')
@@ -84,6 +74,54 @@
                                 <div class="mt-2 ml-2"><a
                                         href="https://www.facebook.com/{{ str_replace('@', '', $perfil->facebook) }}"
                                         target="_blank">{{ $perfil->facebook }}</a></div>
+                            </div>
+                        @endif
+                        @if ($perfil->instagram != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/instagram-celeste.png' }}"
+                                            alt="Instagram" />
+                                    @else
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/instagram-verde.png' }}"
+                                            alt="Instagram" />
+                                    @endif
+                                </div>
+                                <div class="mt-2 ml-2"><a
+                                        href="https://www.instagram.com/{{ str_replace('@', '', $perfil->instagram) }}"
+                                        target="_blank">{{ $perfil->instagram }}</a></div>
+                            </div>
+                        @endif
+                        @if ($perfil->youtube != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/youtube-celeste.png' }}"
+                                            alt="Youtube" />
+                                    @else
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/youtube-verde.png' }}"
+                                            alt="Youtube" />
+                                    @endif
+                                </div>
+                                <div class="mt-2 ml-2"><a href="{{ $perfil->youtube }}"
+                                        target="_blank">{{ $perfil->youtube }}</a>
+                                </div>
+                            </div>
+                        @endif
+
+                        @if ($perfil->website != '')
+                            <div class="flex justify-center" style="color: {{ $banner->color }}">
+                                <div>
+                                    @if ($banner->color == '#05A8E1')
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/pagweb-celeste.png' }}"
+                                            alt="Página web" />
+                                    @else
+                                        <img class="w-7" src="{{ asset('img/contactos') . '/pagweb-verde.png' }}"
+                                            alt="Página web" />
+                                    @endif
+                                </div>
+                                <div class="mt-2 ml-2"><a href="{{ $perfil->website }}"
+                                        target="_blank">{{ $perfil->website }}</a></div>
                             </div>
                         @endif
                         @if ($perfil->twitter != '')
@@ -118,38 +156,8 @@
                             </div>
                         @endif
 
-                        @if ($perfil->youtube != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
-                                <div>
-                                    @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/youtube-celeste.png' }}"
-                                            alt="Youtube" />
-                                    @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/youtube-verde.png' }}"
-                                            alt="Youtube" />
-                                    @endif
-                                </div>
-                                <div class="mt-2 ml-2"><a href="{{ $perfil->youtube }}"
-                                        target="_blank">{{ $perfil->youtube }}</a>
-                                </div>
-                            </div>
-                        @endif
 
-                        @if ($perfil->google != '')
-                            <div class="flex justify-center" style="color: {{ $banner->color }}">
-                                <div>
-                                    @if ($banner->color == '#05A8E1')
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-celeste.png' }}"
-                                            alt="Google" />
-                                    @else
-                                        <img class="w-7" src="{{ asset('img/contactos') . '/googleplay-verde.png' }}"
-                                            alt="Google" />
-                                    @endif
-                                </div>
-                                <div class="mt-2 ml-2">{{ $perfil->google }}</a>
-                                </div>
-                            </div>
-                        @endif
+
 
                         @if ($perfil->linkedin != '')
                             <div class="flex justify-center" style="color: {{ $banner->color }}">
