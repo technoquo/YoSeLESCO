@@ -17,7 +17,7 @@
         <div class="grid md:grid-cols-3 gap-4 mt-12">
             @foreach ($banner->perfiles as $perfil)
                 <div class="max-w-sm text-center">
-                    <div class="flex justify-center">
+                    <div class="flex justify-center m-3">
                         <img class="rounded-full w-52" src="{{ asset('uploads') . '/' . $perfil->imagen }}"
                             alt="Imagen del banner {{ $perfil->full_name }}">
                     </div>
