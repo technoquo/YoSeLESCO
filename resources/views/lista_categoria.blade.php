@@ -166,7 +166,7 @@
                                             alt="linkedin" />
                                     @endif
                                 </div>
-                                <div class="mt-2 ml-2"><a href="">{{ $perfil->linkedin }}</a></div>
+                                <div class="mt-2 ml-2"><a href="https://www.linkedin.com/in/{{ $perfil->linkedin }}" target="_blank">{{ $perfil->linkedin }}</a></div>
                             </div>
                         @endif
                         @if ($perfil->telegram != '')
